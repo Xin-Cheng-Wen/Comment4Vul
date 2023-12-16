@@ -1,7 +1,7 @@
 
 
 # SCALE - Implementation
-## 
+## SCALE: Constructing Symbolic Comment Trees for Software Vulnerability Detection
 
 ## Introduction
 Recently, there has been a growing interest in automatic software vulnerability detection. Pre-trained model-based approaches have demonstrated superior performance than other Deep Learning (DL)-based approaches in detecting vulnerabilities. However, the existing pre-trained model-based approaches generally employ code sequences as input during prediction, and may ignore vulnerability-related structural information as reflected in the following two aspects. First, they tend to fail to infer the semantics of the code statements with complex logic such as those containing multiple operators and pointers. Second, they are hard to comprehend various code execution sequences which are important characteristics of vulnerabilities.
