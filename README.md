@@ -61,6 +61,59 @@ The model implementation code is under the ```SCT-Enhanced\``` folder. The model
 
 <center>Figure2. The impact of batch size in different datasets.</center>
 
+## Response-Phase Experiment results
+
+##### Small-scale Experiment of Specific Prompt
+
+<center>Table 1. </center>
+
+##### Exp 2: Cost of Calling LLM
+
+
+|  Dataset   | FFMPeg+Qemu   |  Reveal  | SVulD  |
+|:-------------------:|:-------------------:|:-------------------:|:-------------------:| 
+| Price    ($)          | 37.73       | 24.14  | 27.21  |
+| Response Price   ($)  | 72.61       | 48.64  | 61.39  |
+| All Price     ($)     | 110.34      | 72.78  | 88.6   |
+| Per Thousand Price ($)| 4.04        | 3.2    | 3.08   |
+
+
+<center>Table 2. The cost of calling LLM in FFMPeg+Qemu, Reveal and SVulD datasets. </center>
+
+##### Exp 3: Time Cost of Transforming Code
+
+|  Dataset   | FFMPeg+Qemu   |  Reveal  | SVulD  |
+|:-------------------:|:-------------------:|:-------------------:|:-------------------:| 
+| Per Thousand Time (s)     | 5.91        | 5.37   | 2.41   |
+
+
+<center>Table 3.The time cost of transforming Code cn FFMPeg+Qemu, Reveal and SVulD datasets.  </center>
+
+##### Exp 4: MCC metric
+|  Dataset   | FFMPeg+Qemu   |  Reveal  | SVulD  |
+|:-------------------:|:-------------------:|:-------------------:|:-------------------:| 
+| CodeBERT   | 0.2348 | 0.4255  | 0.2064  |
+| CodeT5     | 0.2749 | 0.4693  | 0.2226  |
+| UnixCoder  | 0.2917 | 0.5076  | 0.2571  |
+| EPVD       | 0.2586 | 0.496   | 0.2383  |
+| LineVul    | 0.2348 | 0.4255  | 0.2501  |
+| SvulD      | -      | -       | 0.293   |
+| Codellama-7b | 0.0006 | -0.0215 | -0.014  |
+| ChatGPT    | 0.0286 | -0.0117 | 0.1361  |
+| GPT-3.5-Instruct | 0.0133 | -0.0254 | 0.0776  |
+| SCALE      | 0.3263 | 0.5895  | 0.3044  |
+
+<center>Table 4. The MCC evaluation results of SCALE compared with vulnerability detection baselines on the three datasets.</center>
+
+##### Exp 5: T-Test
+
+|  Dataset   | FFMPeg+Qemu   |  Reveal  | SVulD  |
+|:-------------------:|:-------------------:|:-------------------:|:-------------------:| 
+| CodeT5    | <b>4.22E-02 | <b>4.10E-06 | <b>7.47E-70  |
+| UnixCoder | <b>2.67E-08 | 0.54 | <b>4.61E-101 |
+
+
+<center>Table 5. The p-value of t-test results when SCALE compared with the CodeT5 and UnixCoder in terms of accuracy and F1 score.</center>
 
 
 ## References
