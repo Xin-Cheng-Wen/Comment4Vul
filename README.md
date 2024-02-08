@@ -63,9 +63,14 @@ The model implementation code is under the ```SCT-Enhanced\``` folder. The model
 
 ## Response-Phase Experiment results
 
-##### Small-scale Experiment of Specific Prompt
+##### Exp 1: Small-scale Experiment of Specific Prompt
 
-<center>Table 1. </center>
+| Metrics          | Accuracy | Precision | Recall | F1    |
+|:-------------------:|:-------------------:|:-------------------:|:-------------------:| :-------------------:|
+| Specific Prompt  | 54.26    | 51.08     | 19.19  | 27.90 |
+| SCALE            | <b>66.18    | <b>61.88     | <b>68.69  | <b>65.11 |
+
+<center>Table 1. The small-scale experiment of specific prompt</center>
 
 ##### Exp 2: Cost of Calling LLM
 
@@ -113,7 +118,7 @@ The model implementation code is under the ```SCT-Enhanced\``` folder. The model
 | UnixCoder | <b>2.67E-08 | 0.54 | <b>4.61E-101 |
 
 
-<center>Table 5. The p-value of t-test results when SCALE compared with the CodeT5 and UnixCoder in terms of accuracy and F1 score.</center>
+<center>Table 5. The p-value of t-test results when SCALE compared with the CodeT5 and UnixCoder in terms of accuracy.</center>
 
 
 ## References
