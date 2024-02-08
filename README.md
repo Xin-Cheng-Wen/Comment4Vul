@@ -121,6 +121,20 @@ The model implementation code is under the ```SCT-Enhanced\``` folder. The model
 <center>Table 5. The p-value of t-test results when SCALE compared with the CodeT5 and UnixCoder in terms of accuracy.</center>
 
 
+#### Parameter of OPENAI
+```
+openai.ChatCompletion.create(
+    model="gpt-3.5-turbo-0301", 
+        messages=[
+            {"role": "system", "content":prompt},
+            {"role": "user", "content": code}], 
+        temperature = 0, 
+        top_p = 1, 
+        frequency_penalty = 0.0, 
+        presence_penalty = 0.0,
+        stop = ["\n\n"])
+```
+
 ## References
 [1] Yaqin Zhou, Shangqing Liu, Jingkai Siow, Xiaoning Du, and Yang Liu. 2019. Devign: Effective vulnerability identification by learning comprehensive program semantics via graph neural networks. In Advances in Neural Information Processing Systems. 10197–10207.
 
