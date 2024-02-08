@@ -63,7 +63,7 @@ The model implementation code is under the ```SCT-Enhanced\``` folder. The model
 
 ## Response-Phase Experiment results
 
-##### Exp 1: Small-scale Experiment of Specific Prompt
+#### Exp 1: Small-scale Experiment of Specific Prompt
 
 | Metrics          | Accuracy | Precision | Recall | F1    |
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:| :-------------------:|
@@ -72,7 +72,7 @@ The model implementation code is under the ```SCT-Enhanced\``` folder. The model
 
 <center>Table 1. The small-scale experiment of specific prompt</center>
 
-##### Exp 2: Cost of Calling LLM
+#### Exp 2: Cost of Calling LLM
 
 
 |  Dataset   | FFMPeg+Qemu   |  Reveal  | SVulD  |
@@ -85,16 +85,16 @@ The model implementation code is under the ```SCT-Enhanced\``` folder. The model
 
 <center>Table 2. The cost of calling LLM in FFMPeg+Qemu, Reveal and SVulD datasets. </center>
 
-##### Exp 3: Time Cost of Transforming Code
+#### Exp 3: Time Cost of Transforming Code
 
 |  Dataset   | FFMPeg+Qemu   |  Reveal  | SVulD  |
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:| 
 | Per Thousand Time (s)     | 5.91        | 5.37   | 2.41   |
 
 
-<center>Table 3.The time cost of transforming Code cn FFMPeg+Qemu, Reveal and SVulD datasets.  </center>
+<center>Table 3.The time cost of transforming Code in FFMPeg+Qemu, Reveal and SVulD datasets.  </center>
 
-##### Exp 4: MCC metric
+#### Exp 4: MCC metric
 |  Dataset   | FFMPeg+Qemu   |  Reveal  | SVulD  |
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:| 
 | CodeBERT   | 0.2348 | 0.4255  | 0.2064  |
@@ -110,7 +110,7 @@ The model implementation code is under the ```SCT-Enhanced\``` folder. The model
 
 <center>Table 4. The MCC evaluation results of SCALE compared with vulnerability detection baselines on the three datasets.</center>
 
-##### Exp 5: T-Test
+#### Exp 5: T-Test
 
 |  Dataset   | FFMPeg+Qemu   |  Reveal  | SVulD  |
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:| 
@@ -120,6 +120,13 @@ The model implementation code is under the ```SCT-Enhanced\``` folder. The model
 
 <center>Table 5. The p-value of t-test results when SCALE compared with the CodeT5 and UnixCoder in terms of accuracy.</center>
 
+
+#### Exp 6: Conditions does SCALE Perform Best
+| FFMPeg+Qemu | Average | SCALE Average | Select 50 Average |
+|:-------------------:|:-------------------:|:-------------------:|:-------------------:|
+| Token  | 516.44  | 564.66        | 725.88         |
+
+<center>Table 6. The average token of FFMPeg+Qemu dataset. </center>
 
 #### Parameter of OPENAI
 ```
@@ -134,6 +141,9 @@ openai.ChatCompletion.create(
         presence_penalty = 0.0,
         stop = ["\n\n"])
 ```
+
+
+
 
 ## References
 [1] Yaqin Zhou, Shangqing Liu, Jingkai Siow, Xiaoning Du, and Yang Liu. 2019. Devign: Effective vulnerability identification by learning comprehensive program semantics via graph neural networks. In Advances in Neural Information Processing Systems. 10197–10207.
